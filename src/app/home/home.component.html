@@ -1,0 +1,40 @@
+<p>home works!</p>
+<p>{{name | titlecase}}</p> <!-- Interpolation -->
+<h1>{{solde | currency}}</h1>
+<!-- <p>B: {{solde | currency:'CAD':'symbol':'4.2-2':'tn'}}</p> -->
+<img [src]="link" alt="images"> <!-- Property Bnding -->
+<br>
+<h1>(change)</h1>
+<input type="text" (change)="get($event)"> <!-- Event Binding -->
+<br><br>
+<h1>(keyup)</h1>
+<input type="text" (keyup)="get($event)"> <!-- Event Binding -->
+<br><br>
+<h1>(ngModel)</h1>
+<input type="text" name="firstName" [(ngModel)]="firstName"> <!-- two way binding -->
+<button (click)="gete()">Click me</button>
+<br><br>
+<input type="text" name="firstName" #first> <!-- two way binding -->
+<button (click)="getes(first)">Click me</button>
+
+<p *ngIf="verif">Welcome Sakly</p>
+
+<div *ngFor="let item of tab; index as i">
+    <p>{{i+1}} {{item}}</p>
+</div>
+
+<div [ngSwitch]="n">
+    <p *ngSwitchCase="1">first</p>
+    <p *ngSwitchCase="2">second</p>
+    <p *ngSwitchCase="3">third</p>
+</div>
+
+<div [style.display]="display">
+    <h1 [style.color]="">hatem sakly</h1>
+</div>
+
+<p>Today is {{today | date}}</p>
+<p>Or if you prefer, {{today | date:'fullDate'}}</p>
+<p>The time is {{today | date:'h:mm a z'}}</p>
+
+<p>{{newName}}</p>
